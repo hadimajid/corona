@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/user', function (Request $request) {
     return 'test';
 });
+
     Route::prefix('test')->group(function (){
         Route::post('create',[TestController::class,'create']);
         Route::delete('/{id}',[TestController::class,'delete']);
